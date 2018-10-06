@@ -5,6 +5,10 @@ simple wrapper around sane scanimage to scan images from node
 
 This module is a wrapper around sane's `scanimage` utility, you need to have sane installed.
 
+```bash
+sudo apt-get install sane
+```
+
 ### Install
 
 ```sh
