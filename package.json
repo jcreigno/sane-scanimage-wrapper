@@ -1,0 +1,29 @@
+{
+  "name": "sane-scanimage-wrapper",
+  "version": "0.1.0",
+  "description": "simple wrapper around sane scanimage to scan images from nodejs.",
+  "main": "index.js",
+  "directories": {
+    "example": "example"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcreigno/sane-scanimage-wrapper.git"
+  },
+  "keywords": [
+    "scan",
+    "image",
+    "scanner",
+    "sane",
+    "scanimage"
+  ],
+  "author": "jerome creignou",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/jcreigno/sane-scanimage-wrapper/issues"
+  },
+  "homepage": "https://github.com/jcreigno/sane-scanimage-wrapper#readme"
+}
