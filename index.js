@@ -4,13 +4,20 @@ function Scanner(device) {
     this.device = device;
 }
 
+function addOptions(args, opts) {
+    return Object.keys(opts).reduce(function (prev, curr) {
+        prev.push('--' + curr + '=' + opts[curr]);
+        return prev;
+    }, args);
+}
+
 Scanner.prototype.scan = function(options) {
-    let opts = options || {};
-    let format = opts.format || 'png';
-    let args = ['--format=' + format];
+    let opts = Object.assign({}, { format: 'png'},  options);
+    let args = [];
     if (this.device) {
-        args.push('--device-name=' + this.device.name);
+        opts.device = this.device.name;
     }
+    addOptions(args, opts);
     let scanimage = processes.spawn('scanimage', args);
     return scanimage.stdout;
 }
