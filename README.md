@@ -1,5 +1,5 @@
 # sane-scanimage-wrapper
-simple wrapper around sane scanimage to scan images from nodejs.
+simple wrapper around sane scanimage to scan images from node
 
 ### Requirements
 
@@ -65,3 +65,35 @@ scanner.scan({ format: 'png', resolution: '150dpi'}).pipe(fs.createWriteStream('
 
 Any options passed to the `scan` method is appended to the underlying command line.
 
+#### Getting options
+
+Gets the options possible from the scanner id.
+```js
+var sane = require('sane-scanimage-wrapper');
+var fs = require('fs');
+
+var scanner = new sane.Scanner();
+var opts = scanner.infos()
+```
+
+Will return an array of options with: name, default value and either min and max fields (for contnous parameters) or a select arry of possible values.
+
+```json
+[
+    {
+        name: "mode",
+        select: [
+            "Lineart",
+            "Gray",
+            "Color"
+        ],
+        default: "Lineart"
+    },
+    {
+        name: "Brightness"
+        min: -1,
+        max: 1,
+        default: 0
+    }
+]
+```
