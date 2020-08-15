@@ -87,13 +87,15 @@ Will return an array of options with: name, default value and either min and max
             "Gray",
             "Color"
         ],
-        "default": "Lineart"
+        "default": "Lineart",
+        "description": "Selects the scan mode (e.g., lineart or color)."
     },
     {
         "name": "Brightness",
-        "min": -1,
-        "max": 1,
-        "default": 0
+        "min": -100,
+        "max": 100,
+        "default": 0,
+        "description": "adjust brightness in %"
     }
 ]
 ```
