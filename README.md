@@ -81,19 +81,19 @@ Will return an array of options with: name, default value and either min and max
 ```json
 [
     {
-        name: "mode",
-        select: [
+        "name": "mode",
+        "select": [
             "Lineart",
             "Gray",
             "Color"
         ],
-        default: "Lineart"
+        "default": "Lineart"
     },
     {
-        name: "Brightness"
-        min: -1,
-        max: 1,
-        default: 0
+        "name": "Brightness",
+        "min": -1,
+        "max": 1,
+        "default": 0
     }
 ]
 ```
